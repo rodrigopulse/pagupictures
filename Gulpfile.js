@@ -10,6 +10,8 @@ const concat        = require('gulp-concat');
 const uglify        = require('gulp-uglify');
 const phplint       = require('gulp-phplint');
 const rename		= require('gulp-rename');
+const browserSync   = require('browser-sync').create();
+var reload          = browserSync.reload;
 
 /**
  * Sass
@@ -55,9 +57,14 @@ function php() {
  * Watch Task
  */
 function watchFiles() {
-    gulp.watch('assets/sass/**/*.scss', gulp.series(css));
-    gulp.watch(jsFiles, gulp.series(js));
-    gulp.watch('./**/*.php', gulp.series(php));
+    browserSync.init(null, {
+        proxy: 'http://pagu.localhost',
+        browser: "google chrome",
+                port: 3000,
+    });
+    gulp.watch('assets/sass/**/*.scss', gulp.series(css)).on("change", reload);
+    gulp.watch(jsFiles, gulp.series(js)).on("change", reload);
+    gulp.watch('./**/*.php', gulp.series(php)).on("change", reload);
 }
 
 const build = gulp.series(css, js, php);
