@@ -1,0 +1,22 @@
+/**
+ * Config
+ */
+ @import "config";
+
+ /**
+  * Bootstrap
+  */
+  @import "./node_modules/bootstrap/scss/bootstrap-reboot";
+  @import "./node_modules/bootstrap/scss/bootstrap-grid";
+
+  /**
+  * Base
+  */
+ @import "base/resets";
+ @import "base/variaveis";
+ @import "base/tipografia";
+
+ /**
+  * Compoentes
+  */
+@import "componentes/videos";

@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+db
+
+# Editors
+*.sublime-*
+.idea
+
+# Node JS
+node_modules
+bower_components
+assets/maps
+assets/bibliotecas/normalize.css
+
+# Compilados
+*.map
+/assets/maps
+wordpress
