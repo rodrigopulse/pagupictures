@@ -5,6 +5,7 @@
 include dirname( __FILE__ ) . '/componentes/hero.php';
 include dirname( __FILE__ ) . '/componentes/selos.php';
 include dirname( __FILE__ ) . '/componentes/titulos.php';
+include dirname( __FILE__ ) . '/componentes/botoes.php';
 /*
  * Remove &nbsp dos posts;
 */

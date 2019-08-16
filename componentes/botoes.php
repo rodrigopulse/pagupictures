@@ -1,4 +1,4 @@
-<?php function botaoPadrao($tipo, $texto, $link, $cor) { ?>
+<?php function botao($tipo, $texto, $link, $cor) { ?>
     <?php if ($tipo === 'href') { ?>
         <a class="botao-padrao botao-padrao--<?php echo $cor; ?>" href="<?php echo $link; ?>" class="botao-padrao">
             <?php echo $texto; ?>
