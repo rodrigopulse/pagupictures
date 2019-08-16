@@ -31,6 +31,8 @@ function css() {
  * JavaScript
  */
 var jsFiles = [
+    './assets/js/plugins/bideo.js',
+    './assets/js/componentes/hero.js',
 	'./assets/js/scripts.js'
 ];
 function js() {

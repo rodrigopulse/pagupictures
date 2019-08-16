@@ -1,0 +1,14 @@
+.selo {
+    width: 100px;
+    height: auto;
+    padding: 7px 10px;
+    display: block;
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    &--cartaz {
+        background: #F75C5C;
+    }
+}
