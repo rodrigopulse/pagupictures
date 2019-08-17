@@ -3,7 +3,7 @@
     height: 90%;
     position: relative;
     display: block;
-    margin: 0;
+    margin: 0 0 25px 0;
     padding: 0;
     &__conteudo {
         max-width: 475px;
@@ -13,6 +13,9 @@
         display: block;
         z-index: 3;
         padding: 25px;
+    }
+    .subtitulo {
+        margin-bottom: 30px;
     }
 }
 

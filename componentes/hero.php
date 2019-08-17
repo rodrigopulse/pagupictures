@@ -9,7 +9,7 @@
                 botao('button', 'Trailer', $trailer, 'branco');
             }
             if(!empty($informacoes)) {
-                //botao('href', 'Mais Informações', $informacoes, 'branco');
+                botao('href', 'Mais Informações', $informacoes, 'branco');
             } ?>
         </div>
         <?php if ($tipo == 'video') { ?>

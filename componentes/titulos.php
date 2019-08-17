@@ -4,7 +4,7 @@
         <?php echo $texto; ?>
     </h1>
 
-<?php } 
+<?php }
 function subTitulo($tipo, $texto) { ?>
     <h2 class="subtitulo subtitulo--<?php echo $tipo; ?>">
         <?php echo $texto; ?>

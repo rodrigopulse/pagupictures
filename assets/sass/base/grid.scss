@@ -1,0 +1,12 @@
+body {
+    background-color: $corFundo;
+}
+.container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0 auto 25px auto;
+    &--max {
+        max-width: 1110px;
+    }
+}

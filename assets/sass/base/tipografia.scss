@@ -1,9 +1,11 @@
 body {
     font-family: $fonteTexto;
+    color: $corPrimaria;
 }
 
 /* Títulos */
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: $fonteTitulos;
     margin-bottom: .5rem;
     font-weight: 500;
     line-height: 1.2;

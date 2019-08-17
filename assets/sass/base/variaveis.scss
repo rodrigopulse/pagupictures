@@ -1,6 +1,15 @@
 //Cores
-$corPrimaria: #000;
-$corSecundaria: #ccc;
+
+// Cor que vai nos textos e partes com Bg escuro no tema
+$corPrimaria: #393939;
+
+// Cores dos selos em selos.scss
+$cartaz: #F75C5C;
+$embreve: #72C482;
+$catalogo: #EAAC37;
+// Cor do BG em grid.scss
+$corFundo: #DEDBDB;
 
 // Tipografia
 $fonteTexto: 'Open Sans', sans-serif;
+$fonteTitulos: 'Montserrat', sans-serif;
