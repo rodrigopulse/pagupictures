@@ -1,6 +1,6 @@
 <?php function cardFilmes($thumb, $titulo, $link, $selo) { ?>
-    <a href="<?php echo $link; ?>">
-        <div class="card-filme">
+    <a class="card-filme" href="<?php echo $link; ?>">
+        <div class="card-filme__container">
             <div class="card-filme__thumb">
                 <img src="<?php echo $thumb; ?>" alt="<?php echo $titulo; ?>">
             </div>

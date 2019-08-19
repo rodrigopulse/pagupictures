@@ -22,14 +22,50 @@ hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, $informacoes);
  * Cards dos filmes
  */
 echo '<div class="container container--max">';
-    echo '<div class="col-sm-12 col-md-3">';
-        $thumb      = get_bloginfo( 'template_url' ) .'/assets/imagens/cartaz-filmes.jpg';
-        $titulo     = 'Lorem ipsum dolor';
-        $link       = '#';
-        $selo       = 'cartaz';
-        cardFilmes($thumb, $titulo, $link, $selo);
+
+    echo '<div class="row">';
+
+        echo '<div class="col-sm-12 col-md-3">';
+            $thumb      = get_bloginfo( 'template_url' ) .'/assets/imagens/cartaz-filmes.jpg';
+            $titulo     = 'Lorem ipsum dolor';
+            $link       = '#';
+            $selo       = 'cartaz';
+            cardFilmes($thumb, $titulo, $link, $selo);
+        echo '</div>';
+
+        echo '<div class="col-sm-12 col-md-3">';
+            $thumb      = get_bloginfo( 'template_url' ) .'/assets/imagens/cartaz-filmes.jpg';
+            $titulo     = 'Lorem ipsum dolor';
+            $link       = '#';
+            $selo       = 'cartaz';
+            cardFilmes($thumb, $titulo, $link, $selo);
+        echo '</div>';
+
+        echo '<div class="col-sm-12 col-md-3">';
+            $thumb      = get_bloginfo( 'template_url' ) .'/assets/imagens/cartaz-filmes.jpg';
+            $titulo     = 'Lorem ipsum dolor';
+            $link       = '#';
+            $selo       = 'cartaz';
+            cardFilmes($thumb, $titulo, $link, $selo);
+        echo '</div>';
+
+        echo '<div class="col-sm-12 col-md-3">';
+            $thumb      = get_bloginfo( 'template_url' ) .'/assets/imagens/cartaz-filmes.jpg';
+            $titulo     = 'Lorem ipsum dolor';
+            $link       = '#';
+            $selo       = 'cartaz';
+            cardFilmes($thumb, $titulo, $link, $selo);
+        echo '</div>';
+
+    //.row
     echo '</div>';
+
+    //.container
 echo '</div>';
+
+// Distribuicao de Filmes
+get_template_part( 'componentes/distribua-filme' );
+
 ?>
 
 <?php get_footer(); ?>
