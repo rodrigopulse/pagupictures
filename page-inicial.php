@@ -16,7 +16,7 @@ if (wp_is_mobile(  )) {
 } else {
     $tipo = 'video';
 }
-hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, $informacoes);
+hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, $informacoes, '');
 
 /**
  * Cards dos filmes
@@ -65,6 +65,17 @@ echo '</div>';
 
 // Distribuicao de Filmes
 get_template_part( 'componentes/distribua-filme' );
+
+// Hero 2
+$imagem         = get_bloginfo( 'template_url' ).'/assets/imagens/caravaggio-roubado.jpg';
+$selo           = 'cartaz';
+$titulo         = 'O Caravaggio Roubado';
+$subtitulo      = 'Um filme de Roberto  Andò';
+$trailer        = 'https://youtube.com';
+$informacoes    = 'https://youtube.com';
+$alinhamento    = 'direita';
+$tipo           = 'imagem';
+hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, $informacoes, $alinhamento);
 
 ?>
 
