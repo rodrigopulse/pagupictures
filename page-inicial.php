@@ -2,19 +2,25 @@
 <?php get_header() ?>
 
 <?php
+$id_pagina      = get_the_ID();
+
 /**
  * Hero
  */
-$imagem         = 'http://pagu.localhost/wp-content/themes/pagupictures/assets/imagens/bg-hero-home.mp4';
-$selo           = 'cartaz';
-$titulo         = 'Não Mexa Com Ela';
-$subtitulo      = 'Um filme de Michel Aviad';
-$trailer        = 'https://youtube.com';
-$informacoes    = 'https://youtube.com';
+$post_hero      = get_field( 'filme_em_destaque', $id_pagina);
+$selo           = get_field( 'selo', $post_hero);
+$titulo         = get_the_title( $post_hero );
+$subtitulo      = get_field( 'subtitulo', $post_hero);
+$trailer        = get_field( 'link_do_trailer', $post_hero);
+$informacoes    = get_the_permalink( $post_hero->ID );
+echo '<pre>';var_dump($post_hero);echo '</pre>';
+
 if (wp_is_mobile(  )) {
     $tipo = 'imagem';
+    $imagem = get_field( 'imagem_de_destaque', $post_hero);
 } else {
-    $tipo = 'video';
+    $tipo   = 'video';
+    $imagem = get_field( 'video_curto', $post_hero);
 }
 hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, $informacoes, '');
 
@@ -26,6 +32,7 @@ echo '<div class="container container--max">';
     echo '<div class="row">';
 
         echo '<div class="col-sm-12 col-md-3">';
+            $destaque_1 = get_field( 'linha_filmes_1', $id_pagina);
             $thumb      = get_bloginfo( 'template_url' ) .'/assets/imagens/cartaz-filmes.jpg';
             $titulo     = 'Lorem ipsum dolor';
             $link       = '#';

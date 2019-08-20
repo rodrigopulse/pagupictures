@@ -7,6 +7,7 @@ include dirname( __FILE__ ) . '/componentes/selos.php';
 include dirname( __FILE__ ) . '/componentes/titulos.php';
 include dirname( __FILE__ ) . '/componentes/botoes.php';
 include dirname( __FILE__ ) . '/componentes/card-filme.php';
+
 /*
  * Remove &nbsp dos posts;
 */
@@ -44,7 +45,8 @@ function add_estilos_e_scripts() {
 	wp_enqueue_style( 'css', get_template_directory_uri() . '/style.css');
 
 	// Fontes
-	wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+    wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Montserrat:500|Open+Sans:400,700&display=swap');
+    wp_enqueue_style( 'social', 'https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?u8vidh');
 
 	// Scripts
 	wp_deregister_script( 'jquery' );

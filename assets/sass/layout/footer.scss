@@ -1,0 +1,51 @@
+.footer {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    padding: 40px 25px;
+    background: $corPrimaria;
+    h3 {
+        width: 100%;
+        color: #fff;
+        text-align: center;
+    }
+    &__sociais {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        text-align: center;
+        a {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            border-radius: 100px;
+            &::before {
+                margin: 0 auto;
+            }
+        }
+        &-titulo {
+            font-size: 13px;
+            color: #fff;
+            margin-right: 15px;
+        }
+        .socicon-facebook {
+            background: #3e5b98;
+            margin-right: 15px;
+        }
+        .socicon-instagram {
+            background: #d6249f;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+            margin-right: 15px;
+        }
+        .socicon-youtube {
+            background: #e02a20;
+        }
+    }
+}
