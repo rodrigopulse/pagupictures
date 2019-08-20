@@ -6,7 +6,8 @@
             titulo('hero', $titulo);
             subtitulo('hero', $subtitulo);
             if(!empty($trailer)) {
-                botao('button', 'Trailer', $trailer, 'branco');
+                $idTrailer = explode('=', $trailer);
+                botao('trailer', 'Trailer', $idTrailer[1], 'branco');
             }
             if(!empty($informacoes)) {
                 botao('href', 'Mais Informações', $informacoes, 'branco');

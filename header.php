@@ -7,3 +7,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<div class="overlay-trailer">
+	<button class="fechar-overlay"></button>
+	<div class="overlay-trailer__carrega-video"></div>
+</div>

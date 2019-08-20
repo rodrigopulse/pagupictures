@@ -10,5 +10,10 @@
     &--branco {
         border-color: #fff;
         color: #fff;
+        transition: all .5s;
+        &:hover {
+            border-color: #F8D40B;
+            color: #F8D40B;
+        }
     }
 }

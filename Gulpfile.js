@@ -33,6 +33,7 @@ function css() {
 var jsFiles = [
     './assets/js/plugins/bideo.js',
     './assets/js/componentes/hero.js',
+    './assets/js/componentes/botoes.js',
 	'./assets/js/scripts.js'
 ];
 function js() {

@@ -24,7 +24,9 @@ add_theme_support( 'post-thumbnails' );
 /**
  * Tamanhos das imagens para thumbs
  */
-//add_image_size( 'thumb-card', 330, 248, true );
+add_image_size( 'hero_menor', 1280, 556, true );
+add_image_size( 'hero_mobile', 375, 600, true );
+add_image_size( 'cartaz', 345, 543, true );
 
 /**
  * Habilita o Title no wordpress
