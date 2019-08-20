@@ -51,9 +51,6 @@ echo '<div class="container container--max">';
     //.container
 echo '</div>';
 
-// Distribuicao de Filmes
-get_template_part( 'componentes/distribua-filme' );
-
 // Hero 2
 
 $post_hero      = get_field( 'filme_em_destaque_2', $id_pagina);
@@ -75,6 +72,8 @@ $alinhamento    = 'direita';
 
 hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, $informacoes, $alinhamento);
 
+// Distribuicao de Filmes
+get_template_part( 'componentes/distribua-filme' );
 ?>
 
 <?php get_footer(); ?>
