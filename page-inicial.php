@@ -11,9 +11,8 @@ $post_hero      = get_field( 'filme_em_destaque', $id_pagina);
 $selo           = get_field( 'selo', $post_hero);
 $titulo         = get_the_title( $post_hero );
 $subtitulo      = get_field( 'subtitulo', $post_hero);
-$trailer        = get_field( 'link_do_trailer', $post_hero);
+$trailer        = get_field( 'embed_trailer', $post_hero);
 $informacoes    = get_the_permalink( $post_hero);
-
 if (wp_is_mobile(  )) {
     $tipo           = 'imagem';
     $imagemID       = get_field( 'imagem_de_destaque', $post_hero);
