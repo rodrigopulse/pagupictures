@@ -43,7 +43,6 @@ remove_action('wp_print_styles', 'print_emoji_styles');
  */
 function add_estilos_e_scripts() {
 	// Estilos
-	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/assets/bibliotecas/normalize.css');
 	wp_enqueue_style( 'css', get_template_directory_uri() . '/style.css');
 
 	// Fontes

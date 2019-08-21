@@ -10,6 +10,7 @@
     align-items: center;
     box-sizing: border-box;
     padding: 0 25px;
+    transition: all .5s;
 }
 .logo {
     width: auto;
@@ -18,9 +19,9 @@
     display: block;
     left: 0;
     top: 10px;
-    background: #000;
     margin-right: auto;
     align-self: flex-start;
+    z-index: 12;
     svg {
         position: relative;
         display: block;
@@ -29,4 +30,17 @@
         max-width: 60px;
         height: auto;
     }
+    img {
+        max-width: 100px;
+    }
+}
+.logo-fundo {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: -130px;
+    left: -130px;
+    background: #000;
+    border-radius: 1000px;
+    z-index: 11;
 }

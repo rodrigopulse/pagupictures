@@ -1,12 +1,19 @@
 .titulo {
     &--hero {
-        font-size: 70px;
+        font-size: 50px;
         color: #fff;
+        @media screen and (min-width: 768px) {
+            font-size: 70px;
+            text-align: left;
+        }
     }
 }
 .subtitulo {
     &--hero {
-        font-size: 22px;
+        font-size: 18px;
         color: #fff;
+        @media screen and (min-width: 768px) {
+            font-size: 22px;
+        }
     }
 }

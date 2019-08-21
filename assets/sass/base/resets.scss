@@ -7,3 +7,9 @@ a {
         text-decoration: none;
     }
 }
+button {
+    outline: 0;
+    &:active, &:focus {
+        outline: 0;
+    }
+}

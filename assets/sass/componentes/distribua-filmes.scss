@@ -1,9 +1,24 @@
 .distribua-filme {
     background: $corPrimaria;
-    padding: 45px 20px;
+    padding: 20px;
     &__titulo {
         color: #fff;
         margin: 0;
         padding: 0;
+        width: 100%;
+        display: block;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+            width: auto;
+            text-align: left;
+        }
+    }
+    &__botao {
+        text-align: center;
+        margin-top: 25px;
+        @media screen and (min-width: 768px) {
+            margin-top: 0;
+            text-align: right;
+        }
     }
 }
