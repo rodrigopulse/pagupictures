@@ -1,0 +1,12 @@
+.filtros {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    margin: 0 auto 25px auto;
+    align-items: center;
+    justify-content: center;
+    &__titulo {
+        margin-right: 25px;
+    }
+}

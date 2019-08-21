@@ -9,11 +9,14 @@
 <body <?php body_class(); ?>>
 <div class="overlay-trailer">
 	<button class="fechar-overlay js-fechar-overlay">X</button>
+	<div class="loader"></div>
 	<div class="overlay-trailer__carrega-video"></div>
 </div>
 <header class="header">
 	<div class="logo">
-		<img src="<?php bloginfo('template_url'); ?>/assets/imagens/logo-pagu.png" alt="Logo Pagu">
+		<a href="<?php bloginfo('url'); ?>">
+			<img src="<?php bloginfo('template_url'); ?>/assets/imagens/logo-pagu.png" alt="Logo Pagu">
+		</a>
 		<?php //include('assets/imagens/logo-pagu.svg'); ?>
 	</div>
 	<nav role="navigation" class="js-controla-menu">

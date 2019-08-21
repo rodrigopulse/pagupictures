@@ -7,6 +7,7 @@ include dirname( __FILE__ ) . '/componentes/selos.php';
 include dirname( __FILE__ ) . '/componentes/titulos.php';
 include dirname( __FILE__ ) . '/componentes/botoes.php';
 include dirname( __FILE__ ) . '/componentes/card-filme.php';
+include dirname( __FILE__ ) . '/componentes/filtros.php';
 
 /*
  * Remove &nbsp dos posts;

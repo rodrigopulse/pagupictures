@@ -17,4 +17,26 @@
             color: #F8D40B;
         }
     }
+    &--preto {
+        border-color: $corPrimaria;
+        color: $corPrimaria;
+        transition: all .5s;
+        &:hover {
+            border-color: #000;
+            color: #000;
+        }
+    }
+    &--desabilitado {
+        border-color: #9A9999;
+        color: #9A9999;
+        transition: all .5s;
+        &:hover {
+            border-color: #000;
+            color: #000;
+        }
+    }
+    &--ativo {
+        border-color: #000 !important;
+        color: #000 !important;
+    }
 }
