@@ -12,7 +12,7 @@ $subtitulo      = get_field( 'subtitulo', $post_hero);
 $trailer        = get_field( 'embed_trailer', $post_hero);
 $tipo           = 'imagem';
 $imagemID       = get_field( 'imagem_de_destaque', $post_hero);
-$imagem         = wp_get_attachment_image_url( $imagemID, 'hero' );
+$imagem         = wp_get_attachment_image_url( $imagemID, 'hero_menor' );
 
 hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, '', '');
 
@@ -58,11 +58,17 @@ $sinopse            = get_field('sinopse', $id_pagina);
             <p class="descricao-filme">
                 <strong>Classificação:</strong><?php echo ' '.$classificacao; ?>
             </p>
-            <article>
+            <article class="sinopse-do-filme">
                 <?php echo $sinopse; ?>
             </article>
         </div>
     </div>
 </div>
+<?php
+$programacao = get_field_object('lugares', $id_pagina);
 
+foreach ($programacao['value'] as $valor => $label) {
+    echo '<pre>';var_dump($label['cidade']);echo '</pre>';
+}
+?>
 <?php get_footer(); ?>
