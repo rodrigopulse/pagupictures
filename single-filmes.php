@@ -72,24 +72,26 @@ $sinopse            = get_field('sinopse', $id_pagina);
 <div class="container container--max">
 <?php
     $programacao = get_field_object('lugares', $id_pagina);
+    if(!empty($programacao)) {
 
-    foreach ($programacao['value'] as $valor => $label) {
-        echo '<div class="container-accordion">';
-            echo '<div class="accordion"><span class="accordion__cidade">'.$label['cidade'].'</span><span class="seta-baixo"></span></div>';
-            foreach ($label['lugares'] as $key => $value) { ?>
-                <div class="accordion-filho">
-                    <div class="row">
-                        <div class="accordion-filho__lugar col-sm-12 col-md-8">
-                            <?php echo $value['local']; ?>
-                        </div>
-                        <div class="accordion-filho__link col-sm-12 col-md-4">
-                            <a class="botao-padrao botao-padrao--preto" href="<?php echo $value['link']; ?>">Acessar</a>
+        foreach ($programacao['value'] as $valor => $label) {
+            echo '<div class="container-accordion">';
+                echo '<div class="accordion"><span class="accordion__cidade">'.$label['cidade'].'</span><span class="seta-baixo"></span></div>';
+                foreach ($label['lugares'] as $key => $value) { ?>
+                    <div class="accordion-filho">
+                        <div class="row">
+                            <div class="accordion-filho__lugar col-sm-12 col-md-8">
+                                <?php echo $value['local']; ?>
+                            </div>
+                            <div class="accordion-filho__link col-sm-12 col-md-4">
+                                <a class="botao-padrao botao-padrao--preto" href="<?php echo $value['link']; ?>">Acessar</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <?php }
-        echo '</div>';
-    }
-    ?>
+                <?php }
+            echo '</div>';
+        }
+
+    } ?>
 </div>
 <?php get_footer(); ?>
