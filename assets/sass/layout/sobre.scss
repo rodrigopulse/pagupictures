@@ -1,0 +1,48 @@
+.titulo-socios {
+    font-size: 32px;
+    margin: 20px auto;
+    @media screen and (min-width: 768px) {
+        font-size: 45px;
+    }
+}
+.socios {
+    @media screen and (min-width: 768px) {
+        padding: 0 40px;
+    }
+    &__foto {
+        margin: 0 auto 15px auto;
+        max-width: 250px;
+        border-radius: 800px;
+        padding: 0;
+        img {
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            display: block;
+            border-radius: 800px;
+        }
+    }
+    &__titulo {
+        margin: 10px 0;
+        h3 {
+            width: 100%;
+            position: relative;
+            display: block;
+            text-align: center;
+            font-size: 22px;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    &__descricao {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        p {
+            text-align: center;
+        }
+    }
+}
