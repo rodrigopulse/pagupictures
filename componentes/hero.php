@@ -5,7 +5,9 @@
             if(!empty($selo)) {
                 selo('cartaz');
             }
+
             titulo('hero', $titulo);
+
             if(!empty($subtitulo)) {
                 subtitulo('hero', $subtitulo);
             }
