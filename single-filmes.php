@@ -12,7 +12,11 @@ $subtitulo      = get_field( 'subtitulo', $post_hero);
 $trailer        = get_field( 'embed_trailer', $post_hero);
 $tipo           = 'imagem';
 $imagemID       = get_field( 'imagem_de_destaque', $post_hero);
-$imagem         = wp_get_attachment_image_url( $imagemID, 'hero_menor' );
+if (wp_is_mobile() ) {
+    $imagem = wp_get_attachment_image_url( $imagemID, 'hero_mobile' );
+} else {
+    $imagem = wp_get_attachment_image_url( $imagemID, 'hero_menor' );
+}
 
 hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, '', '');
 
@@ -71,14 +75,14 @@ $sinopse            = get_field('sinopse', $id_pagina);
 
     foreach ($programacao['value'] as $valor => $label) {
         echo '<div class="container-accordion">';
-            echo '<div class="accordion">'.$label['cidade'].'</div>';
+            echo '<div class="accordion"><span class="accordion__cidade">'.$label['cidade'].'</span><span class="seta-baixo"></span></div>';
             foreach ($label['lugares'] as $key => $value) { ?>
                 <div class="accordion-filho">
                     <div class="row">
-                        <div class="accordion-filho__lugar col-md-8">
+                        <div class="accordion-filho__lugar col-sm-12 col-md-8">
                             <?php echo $value['local']; ?>
                         </div>
-                        <div class="accordion-filho__link col-md-4">
+                        <div class="accordion-filho__link col-sm-12 col-md-4">
                             <a class="botao-padrao botao-padrao--preto" href="<?php echo $value['link']; ?>">Acessar</a>
                         </div>
                     </div>
