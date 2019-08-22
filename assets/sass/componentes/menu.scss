@@ -141,12 +141,14 @@
     overflow: hidden;
   }
   .snip1135 a:hover:before,
-  .snip1135 .current_page_item a:before {
+  .snip1135 .current_page_item a:before,
+  .snip1135 .current-menu-item a:before {
     opacity: 1;
     width: 100%;
   }
   .snip1135 a:hover:after,
-  .snip1135 .current_page_item a:after {
+  .snip1135 .current_page_item a:after,
+  .snip1135 .current-menu-item a:after {
     max-width: 100%;
   }
 
