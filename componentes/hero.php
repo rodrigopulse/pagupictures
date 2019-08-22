@@ -2,9 +2,13 @@
     <div class="hero <?php if(!empty($alinhamento)){ echo 'hero--'.$alinhamento; } ?> <?php if($tipo === 'imagem'){ echo 'hero--'.$tipo; } ?>">
         <div class="hero__conteudo">
             <?php
-            selo('cartaz');
+            if(!empty($selo)) {
+                selo('cartaz');
+            }
             titulo('hero', $titulo);
-            subtitulo('hero', $subtitulo);
+            if(!empty($subtitulo)) {
+                subtitulo('hero', $subtitulo);
+            }
             if(!empty($trailer)) {
                 botao('trailer', 'Trailer', $trailer, 'branco');
             }
