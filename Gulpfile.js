@@ -35,6 +35,7 @@ var jsFiles = [
     './assets/js/componentes/hero.js',
     './assets/js/componentes/botoes.js',
     './assets/js/componentes/menu.js',
+    './assets/js/componentes/accordion.js',
 	'./assets/js/scripts.js'
 ];
 function js() {
