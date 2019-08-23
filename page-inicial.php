@@ -13,13 +13,24 @@ $titulo         = get_the_title( $post_hero );
 $subtitulo      = get_field( 'subtitulo', $post_hero);
 $trailer        = get_field( 'embed_trailer', $post_hero);
 $informacoes    = get_the_permalink( $post_hero);
-if (wp_is_mobile(  )) {
-    $tipo           = 'imagem';
-    $imagemID       = get_field( 'imagem_de_destaque', $post_hero);
-    $imagem         = wp_get_attachment_image_url( $imagemID, 'hero_mobile' );
+$video_curto    = get_field( 'video_curto', $post_hero);
+if(!empty($video_curto)) {
+    if (wp_is_mobile(  )) {
+        $tipo           = 'imagem';
+        $imagemID       = get_field( 'imagem_de_destaque', $post_hero);
+        $imagem         = wp_get_attachment_image_url( $imagemID, 'hero_mobile' );
+    } else {
+        $tipo   = 'video';
+        $imagem = get_field( 'video_curto', $post_hero);
+    }
 } else {
-    $tipo   = 'video';
-    $imagem = get_field( 'video_curto', $post_hero);
+    $tipo       = 'imagem';
+    $imagemID   = get_field( 'imagem_de_destaque', $post_hero);
+    if (wp_is_mobile()) {
+        $imagem = wp_get_attachment_image_url( $imagemID, 'hero_mobile' );
+    } else {
+        $imagem = wp_get_attachment_image_url( $imagemID, 'hero_menor' );
+    }
 }
 hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, $informacoes, '');
 

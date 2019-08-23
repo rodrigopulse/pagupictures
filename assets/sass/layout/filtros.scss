@@ -2,10 +2,17 @@
     width: 100%;
     height: auto;
     position: relative;
-    display: flex;
+    display: block;
     margin: 0 auto 25px auto;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    .botao-padrao {
+        margin-bottom: 12px;
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
     &__titulo {
         margin-right: 25px;
     }
