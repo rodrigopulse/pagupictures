@@ -1,6 +1,8 @@
 <footer class="footer">
-    <h3>Receba os lançamentos da Pagu no seu e-mail</h3>
-    <div class="footer__newsletter"></div>
+    <h3 class="titulo-footer">Receba os lançamentos da Pagu no seu e-mail</h3>
+    <div class="footer__newsletter">
+        <?php get_template_part('componentes/newsletter'); ?>
+    </div>
     <div class="footer__sociais">
         <span class="footer__sociais-titulo">Segue a gente</span>
         <a class="socicon-facebook" href=""></a>

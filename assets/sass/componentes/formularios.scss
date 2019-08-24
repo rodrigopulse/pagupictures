@@ -20,5 +20,27 @@
 .wpcf7-text, .wpcf7-textarea {
     width: 100%;
     padding: 10px;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #fff;
     box-sizing: border-box;
+    color: #fff;
+    transition: all .5s;
+    &:focus {
+        outline: 0;
+        border-color: #F8D40B;
+    }
+}
+// Mesangens do Formulário de contato
+.wpcf7-mail-sent-ok {
+    background: #32D272;
+    border: 0;
+    color: #fff;
+}
+.wpcf7-validation-errors {
+    background: #F8D40B;
+    border: 0;
+}
+.div.wpcf7-mail-sent-ok {
+    border: 0;
 }

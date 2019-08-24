@@ -17,3 +17,20 @@
         margin-right: 25px;
     }
 }
+// Filtros na versão mobile
+.accordion-filtros {
+    margin-bottom: 25px;
+    .accordion {
+        margin-bottom: 0;
+    }
+    .botao-padrao {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+.botao-limpar-filtros-mobile {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}

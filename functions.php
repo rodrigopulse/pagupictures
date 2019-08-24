@@ -43,7 +43,8 @@ remove_action('wp_print_styles', 'print_emoji_styles');
  * Adiciona os estilos e scripts do tema
  */
 function add_estilos_e_scripts() {
-	// Estilos
+    // Estilos
+    wp_enqueue_style( 'mailchimp', '//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css');
 	wp_enqueue_style( 'css', get_template_directory_uri() . '/style.css');
 
 	// Fontes
@@ -51,7 +52,8 @@ function add_estilos_e_scripts() {
     wp_enqueue_style( 'social', 'https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?u8vidh');
 
 	// Scripts
-	wp_deregister_script( 'jquery' );
+    wp_deregister_script( 'jquery' );
+    wp_enqueue_script( 'addthis', '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d5ae7883a3a4505', array(), '', true );
 	wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.3.1.min.js', array(), '3.3.1', true );
 	wp_enqueue_script( 'jquery');
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/scripts.js', array(), '', true );

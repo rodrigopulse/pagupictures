@@ -65,6 +65,10 @@ $sinopse            = get_field('sinopse', $id_pagina);
             <article class="sinopse-do-filme">
                 <?php echo $sinopse; ?>
             </article>
+            <div class="row compartilhar-filme">
+                <span class="compartilhar-filme__titulo">Compartilhe nas suas redes</span>
+                <div class="addthis_inline_share_toolbox"></div>
+            </div>
         </div>
     </div>
 </div>

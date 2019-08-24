@@ -5,10 +5,15 @@
     position: relative;
     padding: 40px 25px;
     background: $corPrimaria;
-    h3 {
+    .titulo-footer {
         width: 100%;
         color: #fff;
         text-align: center;
+        margin-bottom: 20px;
+        font-size: 22px;
+        @media screen and (min-width: 768px) {
+            font-size: 28px;
+        }
     }
     &__sociais {
         width: 100%;
