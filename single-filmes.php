@@ -47,28 +47,48 @@ $sinopse            = get_field('sinopse', $id_pagina);
             <p class="descricao-filme">
                 <strong><?php echo $tempo.'` / '.$pais.' / '.$ano.' / '.$formato.' / '.$genero; ?></strong>
             </p>
-            <p class="descricao-filme">
-                <strong>Lançamento do Filme:</strong><?php echo ' '.$data_de_lancamento; ?>
-            </p>
-            <p class="descricao-filme">
-                <strong>Título Original:</strong><?php echo ' '.$titulo_original; ?>
-            </p>
-            <p class="descricao-filme">
-                <strong>Elenco:</strong><?php echo ' '.$elenco; ?>
-            </p>
-            <p class="descricao-filme">
-                <strong>Direção:</strong><?php echo ' '.$direcao; ?>
-            </p>
-            <p class="descricao-filme">
-                <strong>Classificação:</strong><?php echo ' '.$classificacao; ?>
-            </p>
-            <article class="sinopse-do-filme">
-                <?php echo $sinopse; ?>
-            </article>
-            <div class="row compartilhar-filme">
+
+            <?php if(!empty($data_de_lancamento)) { ?>
+                <p class="descricao-filme">
+                    <strong>Lançamento do Filme:</strong><?php echo ' '.$data_de_lancamento; ?>
+                </p>
+            <?php } ?>
+
+            <?php if(!empty($titulo_original)) { ?>
+                <p class="descricao-filme">
+                    <strong>Título Original:</strong><?php echo ' '.$titulo_original; ?>
+                </p>
+            <?php } ?>
+
+            <?php if(!empty($elenco)) { ?>
+                <p class="descricao-filme">
+                    <strong>Elenco:</strong><?php echo ' '.$elenco; ?>
+                </p>
+            <?php } ?>
+
+            <?php if(!empty($direcao)) { ?>
+                <p class="descricao-filme">
+                    <strong>Direção:</strong><?php echo ' '.$direcao; ?>
+                </p>
+            <?php } ?>
+
+            <?php if(!empty($classificao)) { ?>
+                <p class="descricao-filme">
+                    <strong>Classificação:</strong><?php echo ' '.$classificacao; ?>
+                </p>
+            <?php } ?>
+
+            <?php if(!empty($sinopse)) { ?>
+                <article class="sinopse-do-filme">
+                    <?php echo $sinopse; ?>
+                </article>
+            <?php } ?>
+
+            <div class="compartilhar-filme">
                 <span class="compartilhar-filme__titulo">Compartilhe nas suas redes</span>
                 <div class="addthis_inline_share_toolbox"></div>
             </div>
+
         </div>
     </div>
 </div>
