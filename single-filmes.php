@@ -96,7 +96,7 @@ $sinopse            = get_field('sinopse', $id_pagina);
 <div class="container container--max">
 <?php
     $programacao = get_field_object('lugares', $id_pagina);
-    if(!empty($programacao)) {
+    if(!empty($programacao['value'])) {
 
         foreach ($programacao['value'] as $valor => $label) {
             echo '<div class="container-accordion">';
