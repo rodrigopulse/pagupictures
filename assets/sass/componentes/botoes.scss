@@ -14,8 +14,8 @@
         color: #fff;
         transition: all .5s;
         &:hover {
-            border-color: #F8D40B;
-            color: #F8D40B;
+            border-color: $corHover;
+            color: $corHover;
         }
     }
     &--preto {
