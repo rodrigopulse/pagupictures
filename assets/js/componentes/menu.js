@@ -4,9 +4,17 @@
         function menuMovimentacao() {
             var y = $(window).scrollTop();
             if (y > lastScrollTop){
-                $(".header").css({'top': '-60px'});
+                if ($(".header").hasClass("header-logado")) {
+                    $(".header").css({'top': '-30px'});
+                } else{
+                    $(".header").css({'top': '-60px'});
+                }
             } else {
-                $(".header").css({'top': '0'});
+                if ($(".header").hasClass("header-logado")) {
+                    $(".header").css({'top': '30px'});
+                } else {
+                    $(".header").css({'top': '0'});
+                }
             }
             lastScrollTop = y;
         }
