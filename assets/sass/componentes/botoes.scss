@@ -23,8 +23,8 @@
         color: $corPrimaria;
         transition: all .5s;
         &:hover {
-            border-color: #000;
-            color: #000;
+            border-color: $corHoverEscuro;
+            color: $corHoverEscuro;
         }
     }
     &--desabilitado {

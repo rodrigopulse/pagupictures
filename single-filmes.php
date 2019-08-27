@@ -92,13 +92,14 @@ $sinopse            = get_field('sinopse', $id_pagina);
         </div>
     </div>
 </div>
-
-<div class="container container--max">
 <?php
-    $programacao = get_field_object('lugares', $id_pagina);
-    if(!empty($programacao['value'])) {
-
-        foreach ($programacao['value'] as $valor => $label) {
+/**
+ * Programação
+ */
+$programacao = get_field_object('lugares', $id_pagina);
+if(!empty($programacao['value'])) { ?>
+    <div class="container container--max">
+        <?php foreach ($programacao['value'] as $valor => $label) {
             echo '<div class="container-accordion">';
                 echo '<div class="accordion"><span class="accordion__cidade">'.$label['cidade'].'</span><span class="seta-baixo"></span></div>';
                 foreach ($label['lugares'] as $key => $value) { ?>
@@ -113,9 +114,21 @@ $sinopse            = get_field('sinopse', $id_pagina);
                         </div>
                     </div>
                 <?php }
-            echo '</div>';
-        }
+            echo '</div>'; 
+        } ?>
+    </div>
+<?php }
+/**
+ * Assistir em Casa
+ */
+$assistir_em_casa = get_field_object('assistir_em_casa', $id_pagina);
+if(!empty($assistir_em_casa)) { ?>
+    <div class="container container--max">
+        <h3>Assista em Casa</h3>
+        <?php foreach ($assistir_em_casa['value'] as $valor => $label) { ?>
+            <a class="botao-padrao botao-padrao--preto" href="<?php echo $label['link']; ?>"><?php echo $label['servico']; ?></a>
+        <?php } ?>
+    </div>
+<?php } ?>
 
-    } ?>
-</div>
 <?php get_footer(); ?>
