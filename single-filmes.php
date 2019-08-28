@@ -104,7 +104,7 @@ if(!empty($programacao['value'])) { ?>
                 echo '<div class="accordion"><span class="accordion__cidade">'.$label['cidade'].'</span><span class="seta-baixo"></span></div>';
                 foreach ($label['lugares'] as $key => $value) { ?>
                     <div class="accordion-filho">
-                        <div class="row">
+                        <div class="row align-items-center">
                             <div class="accordion-filho__lugar col-sm-12 col-md-8">
                                 <?php echo $value['local']; ?>
                             </div>
