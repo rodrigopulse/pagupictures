@@ -28,7 +28,8 @@ $tempo          = get_field( 'tempo', $id_pagina );
 $pais           = get_field( 'pais', $id_pagina );
 $ano            = get_field( 'ano', $id_pagina );
 $formato        = get_field( 'formato', $id_pagina );
-$genero         = get_field( 'genero', $id_pagina );
+$generoObjeto   = get_field_object( 'genero', $id_pagina );
+$genero         = $generoObjeto['value']['label'];
 
 $data_de_lancamento = get_field('data_de_lancamento', $id_pagina);
 $titulo_original    = get_field('titulo_original', $id_pagina);
