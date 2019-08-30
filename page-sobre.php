@@ -53,29 +53,29 @@ hero($tipo, $imagem, '', $titulo, $subtitulo, '', '', '');
         <div class="col-sm-12 col-md-4 socios">
             <div class="row socios__foto">
                 <?php
-                $imagemID   = $socios['value'][0]['foto-socio'];
+                $imagemID   = $socios['value'][1]['foto-socio'];
                 $imagem     = wp_get_attachment_image_url( $imagemID, 'full' );?>
                 <img src="<?php echo $imagem; ?>" alt="Foto dos Sócios">
             </div>
             <div class="row socios__titulo">
-                <h3><?php echo $socios['value'][0]['nome-socio']; ?></h3>
+                <h3><?php echo $socios['value'][1]['nome-socio']; ?></h3>
             </div>
             <div class="row  socios__descricao">
-                <p><?php echo $socios['value'][0]['descricao']; ?></p>
+                <p><?php echo $socios['value'][1]['descricao']; ?></p>
             </div>
         </div>
         <div class="col-sm-12 col-md-4 socios">
             <div class="row socios__foto">
                 <?php
-                $imagemID   = $socios['value'][0]['foto-socio'];
+                $imagemID   = $socios['value'][2]['foto-socio'];
                 $imagem     = wp_get_attachment_image_url( $imagemID, 'full' );?>
                 <img src="<?php echo $imagem; ?>" alt="Foto dos Sócios">
             </div>
             <div class="row socios__titulo">
-                <h3><?php echo $socios['value'][0]['nome-socio']; ?></h3>
+                <h3><?php echo $socios['value'][2]['nome-socio']; ?></h3>
             </div>
             <div class="row  socios__descricao">
-                <p><?php echo $socios['value'][0]['descricao']; ?></p>
+                <p><?php echo $socios['value'][2]['descricao']; ?></p>
             </div>
         </div>
     </div>
