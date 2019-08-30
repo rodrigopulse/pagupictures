@@ -123,7 +123,7 @@ if(!empty($programacao['value'])) { ?>
  * Assistir em Casa
  */
 $assistir_em_casa = get_field_object('assistir_em_casa', $id_pagina);
-if(!empty($assistir_em_casa)) { ?>
+if(!empty($assistir_em_casa['value'])) { ?>
     <div class="container container--max">
         <h3>Assista em Casa</h3>
         <?php foreach ($assistir_em_casa['value'] as $valor => $label) { ?>

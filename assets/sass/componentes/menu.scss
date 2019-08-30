@@ -93,7 +93,7 @@
   @media screen and (min-width: 768px) {
     position: relative;
     top: 8px;
-    display: block;
+    display: flex
   }
 }
 .snip1135 * {
@@ -162,7 +162,9 @@
 	z-index: 9;
 	top: 60px;
 	left: 0;
-	align-items: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 	.snip1135 {
 		width: 100%;
 		margin: 0;
@@ -184,4 +186,17 @@
 			color: $corPrimaria;
 		}
 	}
+}
+.selecionar-lingua {
+  font-size: 16px;
+  color: #ccc;
+  top: 6px;
+  position: relative;
+  display: block;
+  &:hover {
+    color: #fff;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
 }
