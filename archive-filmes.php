@@ -28,7 +28,7 @@ filtros($filtro);
         echo '<div class="row">';
             while ( $the_query->have_posts() ) {
                 $the_query->the_post();
-                echo '<div class="col-sm-12 col-md-3">';
+                echo '<div class="col-sm-12 col-md-3 container-filmes">';
                     $thumbID    = get_field( 'cartaz', $post->ID );
                     $thumb      = wp_get_attachment_image_url( $thumbID , 'cartaz' );
                     $titulo     = get_the_title();

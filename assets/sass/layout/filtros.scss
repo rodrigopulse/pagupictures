@@ -9,6 +9,9 @@
     text-align: center;
     .botao-padrao {
         margin-bottom: 12px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
     }
     @media screen and (min-width: 768px) {
         display: flex;

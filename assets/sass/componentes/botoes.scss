@@ -2,12 +2,41 @@
     width: auto;
     height: auto;
     position: relative;
-    padding: 7px 10px;
+    padding: 7px 0;
     background: none;
-    border: solid 1px;
+    border-bottom: solid 1px;
     cursor: pointer;
     margin-right: 15px;
     display: inline-block;
+    text-transform: uppercase;
+    border: 0;
+    &:after, &:before {
+        position: absolute;
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
+    }
+    &:before {
+        bottom: 0;
+        display: block;
+        height: 3px;
+        width: 0%;
+        content: "";
+    }
+    &:after {
+        left: 0;
+        top: 0;
+        padding: 0.5em 0;
+        position: absolute;
+        content: attr(data-hover);
+        white-space: nowrap;
+        max-width: 0%;
+        overflow: hidden;
+    }
+    &:hover:before {
+        opacity: 1;
+        width: 100%;
+        background-color: $corHover;
+    }
     //border-radius: 100px;
     &--branco {
         border-color: #fff;
