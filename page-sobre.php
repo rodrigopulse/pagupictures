@@ -31,53 +31,33 @@ hero($tipo, $imagem, '', $titulo, $subtitulo, '', '', '');
     <?php the_content(); ?>
 </article>
 
-<h3 class="titulo-socios text-centro">Sócios</h3>
+<h3 class="titulo-socios text-centro">Nosso Time</h3>
 
-<?php $socios = get_field_object('socios', $id_pagina); ?>
-<div class="container container--max">
-    <div class="row">
-        <div class="col-sm-12 col-md-4 socios">
-            <div class="row socios__foto">
-                <?php
-                $imagemID   = $socios['value'][0]['foto-socio'];
-                $imagem     = wp_get_attachment_image_url( $imagemID, 'full' );?>
-                <img src="<?php echo $imagem; ?>" alt="Foto dos Sócios">
-            </div>
-            <div class="row socios__titulo">
-                <h3><?php echo $socios['value'][0]['nome-socio']; ?></h3>
-            </div>
-            <div class="row  socios__descricao">
-                <p><?php echo $socios['value'][0]['descricao']; ?></p>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-4 socios">
-            <div class="row socios__foto">
-                <?php
-                $imagemID   = $socios['value'][1]['foto-socio'];
-                $imagem     = wp_get_attachment_image_url( $imagemID, 'full' );?>
-                <img src="<?php echo $imagem; ?>" alt="Foto dos Sócios">
-            </div>
-            <div class="row socios__titulo">
-                <h3><?php echo $socios['value'][1]['nome-socio']; ?></h3>
-            </div>
-            <div class="row  socios__descricao">
-                <p><?php echo $socios['value'][1]['descricao']; ?></p>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-4 socios">
-            <div class="row socios__foto">
-                <?php
-                $imagemID   = $socios['value'][2]['foto-socio'];
-                $imagem     = wp_get_attachment_image_url( $imagemID, 'full' );?>
-                <img src="<?php echo $imagem; ?>" alt="Foto dos Sócios">
-            </div>
-            <div class="row socios__titulo">
-                <h3><?php echo $socios['value'][2]['nome-socio']; ?></h3>
-            </div>
-            <div class="row  socios__descricao">
-                <p><?php echo $socios['value'][2]['descricao']; ?></p>
-            </div>
+<?php $time = get_field_object('time', $id_pagina); ?>
+
+<?php if(!empty($time['value'])) { ?>
+    <div class="container container--max">
+        <div class="row">
+            <?php foreach ($time['value'] as $key => $value) { ?>
+
+                <div class="col-sm-12 col-md-3 socios">
+                    <div class="row socios__foto">
+                        <?php
+                        $imagemID   = $value['foto-time'];
+                        $imagem     = wp_get_attachment_image_url( $imagemID, 'full' );?>
+                        <img src="<?php echo $imagem; ?>" alt="Foto do Time">
+                    </div>
+                    <div class="row socios__titulo">
+                        <h3><?php echo $value['nome-time']; ?></h3>
+                    </div>
+                    <div class="row  socios__descricao">
+                        <p><?php echo $value['area-time']; ?></p>
+                    </div>
+                </div>
+
+            <?php } ?>
+
         </div>
     </div>
-</div>
+<?php } ?>
 <?php get_footer(); ?>
