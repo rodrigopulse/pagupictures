@@ -126,7 +126,11 @@ if(!empty($assistir_em_casa['value'])) { ?>
     <div class="container container--max">
         <h3>Assista em Casa</h3>
         <?php foreach ($assistir_em_casa['value'] as $valor => $label) { ?>
-            <a class="botao-padrao botao-padrao--preto" href="<?php echo $label['link']; ?>"><?php echo $label['servico']; ?></a>
+            <a class="botao-padrao botao-padrao--preto" href="<?php echo $label['link']; ?>">
+                <?php $imagemID = $label['servico']; 
+                $thumbServico = wp_get_attachment_image_url( $imagemID, 'full' );?>
+                <img src="<?php echo $thumbServico; ?>" alt="Serviço">
+            </a>
         <?php } ?>
     </div>
 <?php } ?>
