@@ -38,8 +38,7 @@ $direcao            = get_field('direcao', $id_pagina);
 $classificacao      = get_field('classificacao', $id_pagina);
 $sinopse            = get_field('sinopse', $id_pagina);
 ?>
-<div class="container container--max">
-    <h3 class="titulo-informacoes">Informações do Filme</h3>
+<div class="container container--max"> 
     <div class="row">
         <div class="col-sm-12 col-md-4 post-filme-cartaz">
             <img src="<?php echo $cartaz; ?>" alt="Cartaz do Filme">
