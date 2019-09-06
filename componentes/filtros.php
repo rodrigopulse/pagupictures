@@ -59,12 +59,12 @@
                 </div>
                 <div class="row">
                     <div class="accordion-filho__lugar col-sm-12">
-                        <a class="botao-padrao <?php echo "$classeCatalogo"; ?>" href="/filmes?filtro=catalogo">Catálogo</a>
+                        <a class="botao-padrao <?php echo "$classeEmCasa"; ?>" href="/filmes?filtro=emcasa">Assistir em Casa</a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="accordion-filho__lugar col-sm-12">
-                        <a class="botao-padrao <?php echo "$classeEmCasa"; ?>" href="/filmes?filtro=emcasa">Assistir em Casa</a>
+                        <a class="botao-padrao <?php echo "$classeCatalogo"; ?>" href="/filmes?filtro=catalogo">Catálogo</a>
                     </div>
                 </div>
             </div>
@@ -75,8 +75,8 @@
             <a class="botao-padrao <?php echo "$classeTodos"; ?>" href="/filmes">Todos</a>
             <a class="botao-padrao <?php echo "$classeCartaz"; ?>" href="/filmes?filtro=cartaz">Em Cartaz</a>
             <a class="botao-padrao <?php echo "$classeEmbreve"; ?>" href="/filmes?filtro=embreve">Em Breve</a>
-            <a class="botao-padrao <?php echo "$classeCatalogo"; ?>" href="/filmes?filtro=catalogo">Catálogo</a>
             <a class="botao-padrao <?php echo "$classeEmCasa"; ?>" href="/filmes?filtro=emcasa">Assistir em Casa</a>
+            <a class="botao-padrao <?php echo "$classeCatalogo"; ?>" href="/filmes?filtro=catalogo">Catálogo</a>
         </div>
     <?php } ?>
 <?php } ?>
