@@ -28,8 +28,17 @@
 .compartilhar-filme {
     &__titulo {
         width: 100%;
-        margin-bottom: 3px;
+        margin-bottom: 8px;
         display: block;
         font-size: 12px;
+    }
+}
+.container-imagens-filme {
+    margin-top: 30px;
+    &__cols {
+        margin-bottom: 15px;
+        img {
+            width: 100%;
+        }
     }
 }

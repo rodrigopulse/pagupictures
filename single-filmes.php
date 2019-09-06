@@ -88,10 +88,28 @@ $sinopse            = get_field('sinopse', $id_pagina);
                 <span class="compartilhar-filme__titulo">Compartilhe nas suas redes</span>
                 <div class="addthis_inline_share_toolbox"></div>
             </div>
-
+            <?php
+            /**
+             * Imagens
+             */
+            $imagensObjeto = get_field_object('imagens-filme', $id_pagina);
+            $imagens = $imagensObjeto['value']; ?>
+            <div class="row container-imagens-filme">
+                <?php foreach ($imagens as $label) { ?>
+                    <div class="col-sm-12 col-md-4 container-imagens-filme__cols">
+                        <?php 
+                        $thumb = wp_get_attachment_image_url( $label['imagem-filme'], 'medium' );
+                        $linkThumb = get_the_permalink( $label['imagem-filme'] ); ?>
+                        <a target="_blank" href="<?php echo $linkThumb; ?>">
+                            <img src="<?php echo $thumb; ?>" alt="Imagens do Filme">
+                        </a>
+                    </div>
+                <?php } ?>
+            </div>
         </div>
     </div>
 </div>
+
 <?php
 /**
  * Programação
