@@ -3,7 +3,7 @@
         <div class="hero__conteudo">
             <?php
             if(!empty($selo)) {
-                selo('cartaz');
+                selo($selo);
             }
 
             titulo('hero', $titulo);
