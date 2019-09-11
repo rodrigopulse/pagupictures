@@ -104,3 +104,19 @@ function preferencias_admin_bar() {
     echo $op;
 }
 
+/**
+ * Tela de login
+ */
+function login_template() { ?>
+<style type="text/css">
+    body.login div#login h1 a {
+        background-image: url('<?php echo get_bloginfo('template_url'); ?>/assets/imagens/logo-pagu.png');
+        padding-bottom: 42px;
+    }
+    body.login {
+        background: #333333;
+    }
+</style>
+<?php }
+add_action( 'login_enqueue_scripts', 'login_template' ); ?>
+
