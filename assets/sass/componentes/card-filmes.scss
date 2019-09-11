@@ -11,7 +11,7 @@
     margin: 0 0 25px 0;
     padding: 0;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    border-radius: 4px;
+    border-radius: $bordaRedonda;
     @media screen and (min-width: 768px) {
         background: #fff;
         margin: 0;
@@ -37,8 +37,8 @@
         margin: 0;
         padding: 20px;
         background: #fff;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: $bordaRedonda;
+        border-bottom-right-radius: $bordaRedonda;
         @media scree and (min: 768px) {
             background: none;
         }
@@ -63,8 +63,8 @@
             margin: 0;
             padding: 0;
             border: 0;
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
+            border-top-left-radius: $bordaRedonda;
+            border-top-right-radius: $bordaRedonda;
         }
     }
     .selo {
@@ -72,7 +72,7 @@
         right: 0;
         top: 0;
         z-index: 2;
-        border-top-right-radius: 4px;
-        border-bottom-left-radius: 4px;
+        border-top-right-radius: $bordaRedonda;
+        border-bottom-left-radius: $bordaRedonda;
     }
 }
