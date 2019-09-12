@@ -98,10 +98,13 @@ $sinopse            = get_field('sinopse', $id_pagina);
                 <div class="row container-imagens-filme">
                     <?php foreach ($imagens as $label) { ?>
                         <div class="col-sm-12 col-md-4 container-imagens-filme__cols">
-                            <?php 
+                            <?php
                             $thumb = wp_get_attachment_image_url( $label['imagem-filme'], 'medium' );
                             $linkThumb = get_the_permalink( $label['imagem-filme'] ); ?>
-                            <a target="_blank" href="<?php echo $linkThumb; ?>">
+                            <a class="container-imagens-filme__link" target="_blank" href="<?php echo $linkThumb; ?>">
+                                <div class="container-imagens-filme__overlay">
+                                    <img src="<?php echo get_bloginfo('template_url'); ?>/assets/imagens/lupa-zoom.png" alt="">
+                                </div>
                                 <img src="<?php echo $thumb; ?>" alt="Imagens do Filme">
                             </a>
                         </div>
@@ -134,7 +137,7 @@ if(!empty($programacao['value'])) { ?>
                         </div>
                     </div>
                 <?php }
-            echo '</div>'; 
+            echo '</div>';
         } ?>
     </div>
 <?php }
@@ -147,7 +150,7 @@ if(!empty($assistir_em_casa['value'])) { ?>
         <h3>Assista em Casa</h3>
         <?php foreach ($assistir_em_casa['value'] as $valor => $label) { ?>
             <a class="link-assista-em-casa" target="_blank" href="<?php echo $label['link']; ?>">
-                <?php $imagemID = $label['servico']; 
+                <?php $imagemID = $label['servico'];
                 $thumbServico = wp_get_attachment_image_url( $imagemID, 'full' );?>
                 <img src="<?php echo $thumbServico; ?>" alt="Serviço">
             </a>
