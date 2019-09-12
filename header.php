@@ -7,7 +7,9 @@
 </head>
 <body <?php body_class(); ?>>
 <div class="overlay-trailer">
-	<button class="fechar-overlay js-fechar-overlay">X</button>
+	<button class="fechar-overlay js-fechar-overlay">
+		<img src="<?php echo get_bloginfo('template_url'); ?>/assets/imagens/fechar.png" alt="Botão Fechar">
+	</button>
 	<div class="loader"></div>
 	<div class="overlay-trailer__carrega-video"></div>
 </div>

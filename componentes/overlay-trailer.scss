@@ -20,11 +20,20 @@
 }
 .fechar-overlay {
     position: fixed;
-    top: 60px;
+    top: 20px;
     right: 20px;
     background: none;
     padding: 20px;
     border: 0;
     color: #fff;
     z-index: 7;
+    opacity: .7;
+    -webkit-transition: all 2s;
+    transition: all .4s;
+    &:hover {
+        opacity: 1;
+    }
+    img {
+        max-width: 30px;
+    }
 }
