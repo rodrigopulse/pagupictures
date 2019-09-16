@@ -62,25 +62,26 @@ echo '<div class="container container--max">';
 echo '</div>';
 
 // Hero 2
-
 $post_hero      = get_field( 'filme_em_destaque_2', $id_pagina);
-$selo           = get_field( 'selo', $post_hero);
-$titulo         = get_the_title( $post_hero );
-$subtitulo      = get_field( 'subtitulo', $post_hero);
-$trailer        = get_field( 'link_do_trailer', $post_hero);
-$informacoes    = get_the_permalink( $post_hero);
-$tipo           = 'imagem';
-$imagemID       = get_field( 'imagem_de_destaque', $post_hero);
+if( !empty( $post_hero ) ) {
+    $selo           = get_field( 'selo', $post_hero);
+    $titulo         = get_the_title( $post_hero );
+    $subtitulo      = get_field( 'subtitulo', $post_hero);
+    $trailer        = get_field( 'link_do_trailer', $post_hero);
+    $informacoes    = get_the_permalink( $post_hero);
+    $tipo           = 'imagem';
+    $imagemID       = get_field( 'imagem_de_destaque', $post_hero);
 
-if(wp_is_mobile()) {
-    $imagem = wp_get_attachment_image_url( $imagemID, 'hero_mobile' );
-} else {
-    $imagem = wp_get_attachment_image_url( $imagemID, 'hero_menor' );
+    if(wp_is_mobile()) {
+        $imagem = wp_get_attachment_image_url( $imagemID, 'hero_mobile' );
+    } else {
+        $imagem = wp_get_attachment_image_url( $imagemID, 'hero_menor' );
+    }
+
+    $alinhamento    = 'direita';
+
+    hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, $informacoes, $alinhamento);
 }
-
-$alinhamento    = 'direita';
-
-hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, $informacoes, $alinhamento);
 
 ?>
 
