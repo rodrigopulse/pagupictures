@@ -25,4 +25,24 @@
             font-size: 22px;
         }
     }
+    &--pagina-inicial-filmes {
+        width: 100%;
+        height: auto;
+        display: block;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-size: 40px;
+    }
+}
+/**
+ * Classe para o título de filmes da home
+ */
+.container-home-titulo-filmes {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 25px;
 }

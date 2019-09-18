@@ -24,7 +24,7 @@ if(wp_is_mobile()) {
 }
 
 
-hero($tipo, $imagem, '', $titulo, $subtitulo, '', '', '');
+hero($tipo, $imagem, '', $titulo, $subtitulo, '', '', '', 'pagina-sobre');
 ?>
 
 <article class="container container--max conteudo-pagina">

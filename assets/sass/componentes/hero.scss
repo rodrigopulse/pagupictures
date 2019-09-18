@@ -61,6 +61,15 @@
             }
         }
     }
+    /**
+     * Customização para cada página
+     */
+    &--footer-inicial {
+        margin-bottom: 0;
+    }
+    &--pagina-sobre {
+        margin-bottom: 50px;
+    }
 }
 /**
  * Hero com Vídeo

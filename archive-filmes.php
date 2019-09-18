@@ -1,8 +1,6 @@
 <?php get_header();
 echo '<div class="container container--max container--margin-top">';
 
-//titulo('paginas', 'Filmes');
-
 $filtro = $_GET['filtro'];
 if (!empty($filtro)) {
     $the_query = new WP_Query( array(

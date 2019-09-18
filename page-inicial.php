@@ -32,12 +32,19 @@ if(!empty($video_curto)) {
         $imagem = wp_get_attachment_image_url( $imagemID, 'hero_menor' );
     }
 }
-hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, $informacoes, '');
+hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, $informacoes, '', 'topo-inicial');
 
 /**
  * Cards dos filmes
  */
 echo '<div class="container container--max">';
+    /**
+     * A classe desse subtitulo, está  em componentes/titulos.scss
+     * também do container em volta do subtítulo
+     */
+    echo '<div class="container-home-titulo-filmes text-centro">';
+        subTitulo('h3', 'Filmes', 'pagina-inicial-filmes', '/filmes');
+    echo '</div>';
 
     echo '<div class="row">';
 
@@ -80,7 +87,7 @@ if( !empty( $post_hero ) ) {
 
     $alinhamento    = 'direita';
 
-    hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, $informacoes, $alinhamento);
+    hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, $informacoes, $alinhamento, 'footer-inicial');
 }
 
 ?>

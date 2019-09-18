@@ -18,7 +18,7 @@ if (wp_is_mobile() ) {
     $imagem = wp_get_attachment_image_url( $imagemID, 'hero_menor' );
 }
 
-hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, '', '');
+hero($tipo, $imagem, $selo, $titulo, $subtitulo, $trailer, '', '', 'pagina-filmes');
 
 $cartazID       = get_field( 'cartaz', $id_pagina );
 $cartaz         = wp_get_attachment_image_url( $cartazID , 'cartaz' );
