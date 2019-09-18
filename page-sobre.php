@@ -31,11 +31,12 @@ hero($tipo, $imagem, '', $titulo, $subtitulo, '', '', '', 'pagina-sobre');
     <?php the_content(); ?>
 </article>
 
-<h3 class="titulo-socios text-centro">Nosso Time</h3>
-
 <?php $time = get_field_object('time', $id_pagina); ?>
 
 <?php if(!empty($time['value'])) { ?>
+
+    <?php subTitulo('h3', 'Time', 'time', ''); ?>
+
     <div class="container container--max">
         <div class="row">
             <?php foreach ($time['value'] as $key => $value) { ?>

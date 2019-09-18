@@ -34,6 +34,15 @@
         margin: 0;
         font-size: 40px;
     }
+    &--time {
+        font-size: 32px;
+        margin: 20px auto;
+        width: 100%;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+            font-size: 45px;
+        }
+    }
 }
 /**
  * Classe para o título de filmes da home
