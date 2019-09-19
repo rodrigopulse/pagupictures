@@ -2,6 +2,9 @@
     @media screen and (min-width: 768px) {
         padding: 0 40px;
     }
+    a {
+        color: $corPrimaria;
+    }
     &__foto {
         margin: 0 auto 15px auto;
         max-width: 250px;
@@ -16,7 +19,7 @@
         }
     }
     &__titulo {
-        margin: 10px 0;
+        margin: 10px 0 4px 0;
         h3 {
             width: 100%;
             position: relative;
