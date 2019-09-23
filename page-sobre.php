@@ -46,7 +46,7 @@ hero($tipo, $imagem, '', $titulo, $subtitulo, '', '', '', 'pagina-sobre');
                         <div class="row socios__foto">
                             <?php
                             $imagemID   = $value['foto-time'];
-                            $imagem     = wp_get_attachment_image_url( $imagemID, 'full' );?>
+                            $imagem     = wp_get_attachment_image_url( $imagemID, 'time' );?>
                             <img src="<?php echo $imagem; ?>" alt="Foto do Time">
                         </div>
                         <div class="row socios__titulo">

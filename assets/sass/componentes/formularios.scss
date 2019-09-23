@@ -5,14 +5,15 @@
     position: relative;
     padding: 7px 10px;
     background: none;
-    border: solid 1px;
+    border: 0;
     cursor: pointer;
     margin-right: 15px;
-    border-color: #fff;
-    color: #fff;
+    border-color: #ccc;
+    color: $corPrimaria;
     transition: all .5s;
-    float: right;
+    float: left;
     border-radius: $bordaRedonda;
+    text-transform: uppercase;
     &:hover {
         border-color: $corHover;
         color: $corHover;
@@ -23,10 +24,11 @@
     padding: 10px;
     background: none;
     border: 0;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
     box-sizing: border-box;
-    color: #fff;
+    color: $corPrimaria;
     transition: all .5s;
+    margin-bottom: 15px;
     &:focus {
         outline: 0;
         border-color: $corHover;
