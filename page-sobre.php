@@ -43,7 +43,7 @@ hero($tipo, $imagem, '', $titulo, $subtitulo, '', '', '', 'pagina-sobre');
 
                 <div class="col-sm-12 col-md-3 socios">
                     <a href="<?php echo $value['link']; ?>">
-                        <div class="row socios__foto">
+                        <div class="socios__foto">
                             <?php
                             $imagemID   = $value['foto-time'];
                             $imagem     = wp_get_attachment_image_url( $imagemID, 'time' );?>
