@@ -16,6 +16,8 @@
             position: relative;
             display: block;
             border-radius: 800px;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
         }
     }
     &__titulo {
