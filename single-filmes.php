@@ -31,21 +31,22 @@ $formato        = get_field( 'formato', $id_pagina );
 $generoObjeto   = get_field_object( 'genero', $id_pagina );
 $genero         = $generoObjeto['value']['label'];
 
-$data_de_lancamento = get_field('data_de_lancamento', $id_pagina);
-$titulo_original    = get_field('titulo_original', $id_pagina);
-$elenco             = get_field('elenco', $id_pagina);
-$direcao            = get_field('direcao', $id_pagina);
-$classificacao      = get_field('classificacao', $id_pagina);
-$sinopse            = get_field('sinopse', $id_pagina);
+$data_de_lancamento     = get_field('data_de_lancamento', $id_pagina);
+$titulo_original        = get_field('titulo_original', $id_pagina);
+$elenco                 = get_field('elenco', $id_pagina);
+$direcao                = get_field('direcao', $id_pagina);
+$classificacaoObjeto    = get_field('classificacao', $id_pagina);
+$classificacao          = $classificacaoObjeto['label'];
+$sinopse                = get_field('sinopse', $id_pagina);
 ?>
-<div class="container container--max"> 
+<div class="container container--max">
     <div class="row">
         <div class="col-sm-12 col-md-4 post-filme-cartaz">
             <img src="<?php echo $cartaz; ?>" alt="Cartaz do Filme">
         </div>
         <div class="col-sm-12 col-md-8">
             <p class="descricao-filme">
-                <strong><?php echo $tempo.'` / '.$pais.' / '.$ano.' / '.$formato.' / '.$genero; ?></strong>
+                <strong><?php echo $tempo.'min / '.$pais.' / '.$ano.' / '.$formato.' / '.$genero; ?></strong>
             </p>
 
             <?php if(!empty($data_de_lancamento)) { ?>
@@ -72,9 +73,9 @@ $sinopse            = get_field('sinopse', $id_pagina);
                 </p>
             <?php } ?>
 
-            <?php if(!empty($classificao)) { ?>
+            <?php if(!empty($classificacao)) { ?>
                 <p class="descricao-filme">
-                    <strong>Classificação:</strong><?php echo ' '.$classificacao; ?>
+                    <strong>Classificação Indicativa:</strong><?php echo ' '.$classificacao; ?>
                 </p>
             <?php } ?>
 
