@@ -135,7 +135,7 @@ if(!empty($programacao['value'])) { ?>
                                 </div>
                                 <?php if(!empty($value['link'])) { ?>
                                     <div class="accordion-filho__link col-sm-12 col-md-4">
-                                        <a class="botao-padrao botao-padrao--preto" href="<?php echo $value['link']; ?>">Comprar</a>
+                                        <a target="_blank" class="botao-padrao botao-padrao--preto" href="<?php echo $value['link']; ?>">Comprar</a>
                                     </div>
                                 <?php } ?>
                             </div>
@@ -154,7 +154,7 @@ if(!empty($assistir_em_casa['value'])) { ?>
     <div class="container container--max">
         <h3>Assista em Casa</h3>
         <?php foreach ($assistir_em_casa['value'] as $valor => $label) { ?>
-            <a class="link-assista-em-casa" target="_blank" href="<?php echo $label['link']; ?>">
+            <a target="_blank" class="link-assista-em-casa" target="_blank" href="<?php echo $label['link']; ?>">
                 <?php $imagemID = $label['servico'];
                 $thumbServico = wp_get_attachment_image_url( $imagemID, 'full' );?>
                 <img src="<?php echo $thumbServico; ?>" alt="Serviço">

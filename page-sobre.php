@@ -42,7 +42,7 @@ hero($tipo, $imagem, '', $titulo, $subtitulo, '', '', '', 'pagina-sobre');
             <?php foreach ($time['value'] as $key => $value) { ?>
 
                 <div class="col-sm-12 col-md-3 socios">
-                    <a href="<?php echo $value['link']; ?>">
+                    <a target="_blank" href="<?php echo $value['link']; ?>">
                         <div class="socios__foto">
                             <?php
                             $imagemID   = $value['foto-time'];
