@@ -140,5 +140,3 @@ function my_theme_archive_title( $title ) {
     return $title;
 }
 
-?>
-
