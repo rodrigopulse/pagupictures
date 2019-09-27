@@ -122,24 +122,28 @@ $sinopse                = get_field('sinopse', $id_pagina);
  */
 $programacao = get_field_object('lugares', $id_pagina);
 if(!empty($programacao['value'])) { ?>
-    <div class="container container--max">
-        <?php foreach ($programacao['value'] as $valor => $label) {
-            echo '<div class="container-accordion">';
-                echo '<div class="accordion"><span class="accordion__cidade">'.$label['cidade'].'</span><span class="seta-baixo"></span></div>';
-                foreach ($label['lugares'] as $key => $value) { ?>
-                    <div class="accordion-filho">
-                        <div class="row align-items-center">
-                            <div class="accordion-filho__lugar col-sm-12 col-md-8">
-                                <?php echo $value['local']; ?>
-                            </div>
-                            <div class="accordion-filho__link col-sm-12 col-md-4">
-                                <a class="botao-padrao botao-padrao--preto" href="<?php echo $value['link']; ?>">Acessar</a>
+    <div class="container">
+        <div class="container-programacao">
+            <?php foreach ($programacao['value'] as $valor => $label) {
+                echo '<div class="container-accordion">';
+                    echo '<div class="accordion"><span class="accordion__cidade">'.$label['cidade'].'</span><span class="seta-baixo"></span></div>';
+                    foreach ($label['lugares'] as $key => $value) { ?>
+                        <div class="accordion-filho">
+                            <div class="row align-items-center">
+                                <div class="accordion-filho__lugar col-sm-12 col-md-8">
+                                    <?php echo $value['local']; ?>
+                                </div>
+                                <?php if(!empty($value['link'])) { ?>
+                                    <div class="accordion-filho__link col-sm-12 col-md-4">
+                                        <a class="botao-padrao botao-padrao--preto" href="<?php echo $value['link']; ?>">Comprar</a>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
-                    </div>
-                <?php }
-            echo '</div>';
-        } ?>
+                    <?php }
+                echo '</div>';
+            } ?>
+        </div>
     </div>
 <?php }
 /**
