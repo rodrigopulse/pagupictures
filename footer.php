@@ -4,7 +4,6 @@
         <?php get_template_part('componentes/newsletter'); ?>
     </div>
     <div class="footer__sociais">
-        <span class="footer__sociais-titulo">Segue a gente</span>
         <a class="socicon-facebook" href=""></a>
         <a class="socicon-instagram" href=""></a>
         <a class="socicon-youtube" href=""></a>

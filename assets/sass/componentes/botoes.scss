@@ -70,3 +70,20 @@
         color: $corHover !important;
     }
 }
+// Classe do botão feita para o play
+.botao-trailer {
+    display: flex;
+    align-items: center;
+    svg {
+        margin-right: 10px;
+        width: 24px;
+    }
+    .st0 {
+        fill: #fff;
+    }
+    &:hover {
+        .st0 {
+            fill: $corHover;
+        }
+    }
+}
