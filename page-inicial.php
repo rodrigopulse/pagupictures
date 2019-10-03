@@ -43,7 +43,8 @@ echo '<div class="container container--max">';
      * também do container em volta do subtítulo
      */
     echo '<div class="container-home-titulo-filmes text-centro">';
-        subTitulo('h3', 'Filmes', 'pagina-inicial-filmes', '/filmes');
+        $tituloFilmesHome = get_theme_mod( 'filmes_home', 'Filmes' );
+        subTitulo('h3', $tituloFilmesHome, 'pagina-inicial-filmes', '/filmes');
     echo '</div>';
 
     echo '<div class="row">';
