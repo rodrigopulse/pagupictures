@@ -140,3 +140,332 @@ function my_theme_archive_title( $title ) {
     return $title;
 }
 
+/**
+ * Customização para traduções
+ */
+function traducao_do_tema( $wp_customize ) {
+    $wp_customize->add_section(
+        'traducao',
+        array(
+            'title' => 'Tradução',
+            'description' => 'Tradução do tema',
+            'priority' => 35,
+        )
+    );
+    /**
+     * Newsletter
+     */
+    $wp_customize->add_setting(
+        'titulo_newsletter',
+        array(
+            'default' => 'Receba nossas novidades no seu e-mail!',
+        )
+    );
+    $wp_customize->add_control(
+        'titulo_newsletter',
+        array(
+            'label' => 'Título formulário Newsletter',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'placeholder_newsletter',
+        array(
+            'default' => 'Seu melhor e-mail',
+        )
+    );
+    $wp_customize->add_control(
+        'placeholder_newsletter',
+        array(
+            'label' => 'Texto input e-mail',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'botao_newsletter',
+        array(
+            'default' => 'Cadastrar',
+        )
+    );
+    $wp_customize->add_control(
+        'botao_newsletter',
+        array(
+            'label' => 'Botão cadastrar newsletter',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    /**
+     * Hero
+     */
+    $wp_customize->add_setting(
+        'botao_trailer',
+        array(
+            'default' => 'Trailer',
+        )
+    );
+    $wp_customize->add_control(
+        'botao_trailer',
+        array(
+            'label' => 'Botão do trailer',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'botao_informacoes',
+        array(
+            'default' => 'Mais Informações',
+        )
+    );
+    $wp_customize->add_control(
+        'botao_informacoes',
+        array(
+            'label' => 'Botão Mais Informações',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+
+    /**
+     * Página Inicial
+     */
+    $wp_customize->add_setting(
+        'filmes_home',
+        array(
+            'default' => 'Filmes',
+        )
+    );
+    $wp_customize->add_control(
+        'filmes_home',
+        array(
+            'label' => 'Título Filmes da Home',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+
+    /**
+     * Página Sobre
+     */
+    $wp_customize->add_setting(
+        'sobre_time',
+        array(
+            'default' => 'Time',
+        )
+    );
+    $wp_customize->add_control(
+        'sobre_time',
+        array(
+            'label' => 'Título do Time na página sobre',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+
+    /**
+     * Filtros
+     */
+    $wp_customize->add_setting(
+        'titulo_filtros',
+        array(
+            'default' => 'Filtros',
+        )
+    );
+    $wp_customize->add_control(
+        'titulo_filtros',
+        array(
+            'label' => 'Título dos Filtros',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'filtro_todos',
+        array(
+            'default' => 'Todos',
+        )
+    );
+    $wp_customize->add_control(
+        'filtro_todos',
+        array(
+            'label' => 'Filtro Todos',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'filtro_cartaz',
+        array(
+            'default' => 'Em Cartaz',
+        )
+    );
+    $wp_customize->add_control(
+        'filtro_cartaz',
+        array(
+            'label' => 'Filtro Em Cartaz',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'filtro_embreve',
+        array(
+            'default' => 'Em Breve',
+        )
+    );
+    $wp_customize->add_control(
+        'filtro_embreve',
+        array(
+            'label' => 'Filtro Em Breve',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'filtro_catalogo',
+        array(
+            'default' => 'Catálogo',
+        )
+    );
+    $wp_customize->add_control(
+        'filtro_catalogo',
+        array(
+            'label' => 'Filtro Catálogo',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'filtro_emcasa',
+        array(
+            'default' => 'Assistir em Casa',
+        )
+    );
+    $wp_customize->add_control(
+        'filtro_emcasa',
+        array(
+            'label' => 'Filtro Assistir em Casa',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    /**
+     * Página do filme
+     */
+    $wp_customize->add_setting(
+        'filme_lancamento',
+        array(
+            'default' => 'Lançamento do Filme',
+        )
+    );
+    $wp_customize->add_control(
+        'filme_lancamento',
+        array(
+            'label' => 'Lançamento do Filme',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'filme_titulo_original',
+        array(
+            'default' => 'Título Original',
+        )
+    );
+    $wp_customize->add_control(
+        'filme_titulo_original',
+        array(
+            'label' => 'Título Original',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'filme_elenco',
+        array(
+            'default' => 'Elenco',
+        )
+    );
+    $wp_customize->add_control(
+        'filme_elenco',
+        array(
+            'label' => 'Elenco',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'filme_direcao',
+        array(
+            'default' => 'Direção',
+        )
+    );
+    $wp_customize->add_control(
+        'filme_direcao',
+        array(
+            'label' => 'Direção',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'filme_classificacao',
+        array(
+            'default' => 'Classificação Indicativa',
+        )
+    );
+    $wp_customize->add_control(
+        'filme_classificacao',
+        array(
+            'label' => 'Classificação Indicativa',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'filme_compartilhe',
+        array(
+            'default' => 'Compartilhe nas suas redes',
+        )
+    );
+    $wp_customize->add_control(
+        'filme_compartilhe',
+        array(
+            'label' => 'Compartilhe nas suas redes - Filme',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'filme_comprar',
+        array(
+            'default' => 'Comprar',
+        )
+    );
+    $wp_customize->add_control(
+        'filme_comprar',
+        array(
+            'label' => 'Botão Comprar na programação',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'filme_assista_casa',
+        array(
+            'default' => 'Assista em Casa',
+        )
+    );
+    $wp_customize->add_control(
+        'filme_assista_casa',
+        array(
+            'label' => 'Título assista em casa na página do filme',
+            'section' => 'traducao',
+            'type' => 'text',
+        )
+    );
+}
+add_action( 'customize_register', 'traducao_do_tema' );

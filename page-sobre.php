@@ -35,7 +35,9 @@ hero($tipo, $imagem, '', $titulo, $subtitulo, '', '', '', 'pagina-sobre');
 
 <?php if(!empty($time['value'])) { ?>
 
-    <?php subTitulo('h3', 'Time', 'time', ''); ?>
+    <?php
+     $tituloTime = get_theme_mod( 'time_sobre', 'Time' );
+    subTitulo('h3', 'Time', 'time', ''); ?>
 
     <div class="container container--max">
         <div class="row">

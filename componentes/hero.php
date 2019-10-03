@@ -23,9 +23,11 @@
             <div class="hero__botoes">
                 <?php
                 if(!empty($trailer)) {
+                    $textoTrailer = get_theme_mod( 'botao_trailer', 'Trailer' );
                     botao('trailer', 'Trailer', $trailer, 'branco');
                 }
                 if(!empty($informacoes)) {
+                    $textoInformacoes = get_theme_mod( 'botao_informacoes', 'Mais Informações' );
                     botao('href', 'Mais Informações', $informacoes, 'branco');
                 } ?>
             </div>

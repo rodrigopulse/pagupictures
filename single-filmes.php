@@ -1,4 +1,15 @@
 <?php get_header();
+/**
+ * Tradução
+ */
+$lancamentoFilme        = get_theme_mod( 'filme_lancamento', 'Lançamento do Filme' );
+$tituloOriginal         = get_theme_mod( 'filme_titulo_original', 'Título Original' );
+$elencoFilme            = get_theme_mod( 'filme_elenco', 'Elenco' );
+$direcaoFilme           = get_theme_mod( 'filme_direcao', 'Direção' );
+$classificacaoFilme     = get_theme_mod( 'filme_classificacao', 'Classificação Indicativa' );
+$compartilheFilme       = get_theme_mod( 'filme_compartilhe', 'Compartilhe nas suas redes' );
+$comprarFilme           = get_theme_mod( 'filme_comprar', 'Comprar' );
+$tituloAssistaCasa      = get_theme_mod( 'filme_assista_casa', 'Assista em Casa' );
 
 $id_pagina      = get_the_ID();
 
@@ -51,31 +62,31 @@ $sinopse                = get_field('sinopse', $id_pagina);
 
             <?php if(!empty($data_de_lancamento)) { ?>
                 <p class="descricao-filme">
-                    <strong>Lançamento do Filme:</strong><?php echo ' '.$data_de_lancamento; ?>
+                    <strong><?php echo $lancamentoFilme; ?>:</strong><?php echo ' '.$data_de_lancamento; ?>
                 </p>
             <?php } ?>
 
             <?php if(!empty($titulo_original)) { ?>
                 <p class="descricao-filme">
-                    <strong>Título Original:</strong><?php echo ' '.$titulo_original; ?>
+                    <strong><?php echo $tituloOriginal; ?>:</strong><?php echo ' '.$titulo_original; ?>
                 </p>
             <?php } ?>
 
             <?php if(!empty($elenco)) { ?>
                 <p class="descricao-filme">
-                    <strong>Elenco:</strong><?php echo ' '.$elenco; ?>
+                    <strong><?php echo $elencoFilme; ?>:</strong><?php echo ' '.$elenco; ?>
                 </p>
             <?php } ?>
 
             <?php if(!empty($direcao)) { ?>
                 <p class="descricao-filme">
-                    <strong>Direção:</strong><?php echo ' '.$direcao; ?>
+                    <strong><?php echo $direcaoFilme; ?>:</strong><?php echo ' '.$direcao; ?>
                 </p>
             <?php } ?>
 
             <?php if(!empty($classificacao)) { ?>
                 <p class="descricao-filme">
-                    <strong>Classificação Indicativa:</strong><?php echo ' '.$classificacao; ?>
+                    <strong><?php echo $classificacaoFilme; ?>:</strong><?php echo ' '.$classificacao; ?>
                 </p>
             <?php } ?>
 
@@ -86,7 +97,7 @@ $sinopse                = get_field('sinopse', $id_pagina);
             <?php } ?>
 
             <div class="compartilhar-filme">
-                <span class="compartilhar-filme__titulo">Compartilhe nas suas redes</span>
+                <span class="compartilhar-filme__titulo"><?php echo $compartilheFilme; ?></span>
                 <div class="addthis_inline_share_toolbox"></div>
             </div>
             <?php
@@ -135,7 +146,7 @@ if(!empty($programacao['value'])) { ?>
                                 </div>
                                 <?php if(!empty($value['link'])) { ?>
                                     <div class="accordion-filho__link col-sm-12 col-md-4">
-                                        <a target="_blank" class="botao-padrao botao-padrao--preto" href="<?php echo $value['link']; ?>">Comprar</a>
+                                        <a target="_blank" class="botao-padrao botao-padrao--preto" href="<?php echo $value['link']; ?>"><?php echo $comprarFilme; ?></a>
                                     </div>
                                 <?php } ?>
                             </div>
@@ -152,7 +163,7 @@ if(!empty($programacao['value'])) { ?>
 $assistir_em_casa = get_field_object('assistir_em_casa', $id_pagina);
 if(!empty($assistir_em_casa['value'])) { ?>
     <div class="container container--max">
-        <h3>Assista em Casa</h3>
+        <h3><?php echo $tituloAssistaCasa; ?></h3>
         <?php foreach ($assistir_em_casa['value'] as $valor => $label) { ?>
             <a target="_blank" class="link-assista-em-casa" target="_blank" href="<?php echo $label['link']; ?>">
                 <?php $imagemID = $label['servico'];
