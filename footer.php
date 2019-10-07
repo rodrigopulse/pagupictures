@@ -4,9 +4,9 @@
         <?php get_template_part('componentes/newsletter'); ?>
     </div>
     <div class="footer__sociais">
-        <a class="socicon-facebook" href=""></a>
-        <a class="socicon-instagram" href=""></a>
-        <a class="socicon-youtube" href=""></a>
+        <a target="_blank" class="socicon-facebook" href="https://www.facebook.com/pagupictures"></a>
+        <a target="_blank" class="socicon-instagram" href="https://www.instagram.com/pagupictures"></a>
+        <a target="_blank" class="socicon-youtube" href="https://www.youtube.com/channel/UC9IVxyHG4JmykxCQacZUxdw"></a>
     </div>
 </footer>
 <?php wp_footer(); ?>
