@@ -28,7 +28,7 @@
                 }
                 if(!empty($informacoes)) {
                     $textoInformacoes = get_theme_mod( 'botao_informacoes', 'Mais Informações' );
-                    botao('href', 'Mais Informações', $informacoes, 'branco');
+                    botao('href', $textoInformacoes, $informacoes, 'branco');
                 } ?>
             </div>
         </div>
