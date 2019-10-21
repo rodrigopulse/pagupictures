@@ -12,12 +12,12 @@
         max-width: 540px;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
         display: block;
         z-index: 3;
         padding: 25px;
         text-align: left;
         @media screen and (min-width: 768px) {
+            transform: translateY(-50%);
             text-align: left;
         }
     }
@@ -36,12 +36,19 @@
     }
     &--direita {
         .hero__conteudo {
+            width: 100%;
             right: 0;
             text-align: left;
             @media screen and (min-width: 768px) {
                 text-align: right;
                 .titulo--hero {
                     text-align: right;
+                }
+            }
+            .hero__botoes {
+                display: block;
+                a {
+                    margin-right: 0;
                 }
             }
         }
